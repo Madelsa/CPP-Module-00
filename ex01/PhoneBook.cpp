@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahmoud <mahmoud@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 16:18:23 by mahmoud           #+#    #+#             */
-/*   Updated: 2024/08/12 21:35:21 by mahmoud          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:48:56 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ void getInput(std::string &field, const std::string &prompt)
     do
     {
         std::cout << prompt << std::endl;
-        std::getline(std::cin, field);
+        if (!std::getline(std::cin, field))
+        {
+            std::cout << "End of input detected. Exiting the program." << std::endl;
+            exit (0);
+        }
         field = trim(field);
         if (field.empty())
         {
@@ -126,7 +130,11 @@ int main()
     while (1)
     {
         std::cout << "Enter a command: ADD - SEARCH - EXIT" << std:: endl;
-        std::getline(std::cin, command);
+        if (!std::getline(std::cin, command))
+        {
+            std::cout << "End of input detected. Exiting the program." << std::endl;
+            break;
+        }
         
         if (pB.index > 7)
             pB.index = 0;
