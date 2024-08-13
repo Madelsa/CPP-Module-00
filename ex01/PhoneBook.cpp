@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 16:18:23 by mahmoud           #+#    #+#             */
-/*   Updated: 2024/08/13 15:48:56 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2024/08/13 16:58:58 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void checkIndex(std::string &selectedIndex, PhoneBook &pB)
                     if (pB.contacts[selectedIndexInt - 1].firstName.empty())
                     {
                         std::cout << "Selected index entry is empty." << std::endl;
+                        return ;
                     }
                     else
                     {
