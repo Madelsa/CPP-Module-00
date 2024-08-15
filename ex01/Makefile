@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+         #
+#    By: mahmoud <mahmoud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 15:41:51 by mahmoud           #+#    #+#              #
-#    Updated: 2024/08/13 15:39:24 by mabdelsa         ###   ########.fr        #
+#    Updated: 2024/08/15 20:50:42 by mahmoud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC	=	PhoneBook.cpp
+SRC	=	./PhoneBook.cpp ./Contact.cpp \
 
 NAME = PhoneBook
 RM = rm -f
